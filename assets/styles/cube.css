@@ -1,0 +1,204 @@
+.cube{
+    width: 50px;
+    height:50px;
+    border: solid;
+}
+
+.cube .cubeLine{
+    color: #000;
+    background: currentColor;
+    position: relative;
+    transition-property:color,background,top,left,width,height,transform;
+    transition-duration:1s;
+}
+
+.cube .cubeLine:before{
+    color: #000;
+    position: absolute;
+    background: currentColor;
+    transition-property:color,background,top,left,width,height,transform;
+    transition-duration:1s;
+}
+
+.cube .cubeLine:after{
+    color: #000;
+    position: absolute;
+    background: currentColor;
+    transition-property:color,background,top,left,width,height,transform;
+    transition-duration:1s;
+}
+
+.cube .cubeLine.standard{
+    top: 23px;
+    left: 5px;
+    width: 40px;
+    height: 4px;
+}
+
+.cube .cubeLine.standard:before{
+    content: '';
+    top: -10px;
+    left:0;
+    width: 100%;
+    height: 4px;
+}
+
+.cube .cubeLine.standard:after{
+    content: '';
+    top: 10px;
+    left:0;
+    width: 100%;
+    height: 4px;
+}
+
+.cube .cubeLine.vertical{
+    top: 23px;
+    left: 5px;
+    width: 40px;
+    height: 4px;
+    transform: rotate(90deg);
+}
+
+.cube .cubeLine.vertical:before{
+    content: '';
+    top: -10px;
+    left:0;
+    width: 100%;
+    height: 4px;
+}
+
+.cube .cubeLine.vertical:after{
+    content: '';
+    top: 10px;
+    left:0;
+    width: 100%;
+    height: 4px;
+}
+
+.cube .cubeLine.left-arrows{
+    top: 23px;
+    left: 7.5px;
+    width: 35px;
+    height: 4px;
+}
+
+.cube .cubeLine.left-arrows:before{
+    content: '';
+    top: -7.5px;
+    left: -4px;
+    width: 25px;
+    height: 4px;
+    transform: rotate(-45deg);
+}
+
+.cube .cubeLine.left-arrows:after{
+    content: '';
+    top: 7.5px;
+    left: -4px;
+    width: 25px;
+    height: 4px;
+    transform: rotate(45deg);
+}
+
+.cube .cubeLine.right-arrows{
+    top: 23px;
+    left: 7.5px;
+    width: 35px;
+    height: 4px;
+}
+
+.cube .cubeLine.right-arrows:before{
+    content: '';
+    top: -7.5px;
+    left: 14px;
+    width: 25px;
+    height: 4px;
+    transform: rotate(45deg);
+}
+
+.cube .cubeLine.right-arrows:after{
+    content: '';
+    top: 7.5px;
+    left: 14px;
+    width: 25px;
+    height: 4px;
+    transform: rotate(-45deg);
+}
+
+.cube .cubeLine.up-arrows{
+    top: 23px;
+    left: 7.5px;
+    width: 35px;
+    height: 4px;
+    transform: rotate(90deg);
+}
+
+.cube .cubeLine.up-arrows:before{
+    content: '';
+    top: -7.5px;
+    left: -4px;
+    width: 25px;
+    height: 4px;
+    transform: rotate(-45deg);
+}
+
+.cube .cubeLine.up-arrows:after{
+    content: '';
+    top: 7.5px;
+    left: -4px;
+    width: 25px;
+    height: 4px;
+    transform: rotate(45deg);
+}
+
+.cube .cubeLine.down-arrows{
+    top: 23px;
+    left: 7.5px;
+    width: 35px;
+    height: 4px;
+    transform: rotate(-90deg);
+}
+
+.cube .cubeLine.down-arrows:before{
+    content: '';
+    top: -7.5px;
+    left: 14px;
+    width: 25px;
+    height: 4px;
+    transform: rotate(45deg);
+}
+
+.cube .cubeLine.down-arrows:after{
+    content: '';
+    top: 7.5px;
+    left: 14px;
+    width: 25px;
+    height: 4px;
+    transform: rotate(-45deg);
+}
+
+.cube .cubeLine.close{
+    top: 25px;
+    left: 5px;
+    width: 40px;
+    height: 0;
+}
+
+.cube .cubeLine.close:before{
+    content: '';
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 4px;
+    transform: rotate(45deg);
+
+}
+
+.cube .cubeLine.close:after{
+    content: '';
+    top: 0px;
+    left:0;
+    width: 100%;
+    height: 4px;
+    transform: rotate(-45deg);
+}

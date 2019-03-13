@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cube</title>
+    
+    <link rel="stylesheet" href="./assets/styles/cube.css">
+    <script src="./assets/javascripts/cube.js"></script>
+</head>
+<body>
+    <div style='display: flex'>
+        <div class="cube">
+            <div class='cubeLine standard'></div>
+        </div>
+        <div class="cube">
+            <div class='cubeLine vertical'></div>
+        </div>
+        <div class="cube">
+            <div class='cubeLine left-arrows'></div>
+        </div>
+        <div class="cube">
+            <div class='cubeLine right-arrows'></div>
+        </div>
+        <div class="cube">
+            <div class='cubeLine up-arrows'></div>
+        </div>
+        <div class="cube">
+            <div class='cubeLine down-arrows'></div>
+        </div>
+        <div class="cube">
+            <div class='cubeLine close'></div>
+        </div>
+            
+    </div>
+    <div>
+        <div id='cube'></div>
+    </div>
+    <div style='display: flex;'>
+        <div>
+            <button onclick = 'changeCube("standard")'>standard</button>
+        </div>
+        <div>
+            <button onclick = 'changeCube("vertical")'>vertical</button>
+        </div>
+        <div>
+            <button onclick = 'changeCube("left-arrows")'>left-arrows</button>
+        </div>
+        <div>
+            <button onclick = 'changeCube("right-arrows")'>right-arrows</button>
+        </div>
+        <div>
+            <button onclick = 'changeCube("up-arrows")'>up-arrows</button>
+        </div>
+        <div>
+            <button onclick = 'changeCube("down-arrows")'>down-arrows</button>
+        </div>
+        <div>
+            <button onclick = 'changeCube("close")'>close</button>
+        </div>
+            
+
+    </div>
+   
+
+
+    <script>
+        cube('#cube').init({
+            color:'red'
+        });
+
+        function changeCube(type){
+            cube('#cube').transByType(type);
+        }
+    
+    </script>
+</body>
+</html>
