@@ -59,19 +59,46 @@
         <div>
             <button onclick = 'changeCube("close")'>close</button>
         </div>
-            
-
+    </div>
+    <div >
+        <input id='colorpicker' type="color" onchange="changeColor(this)">
+        <label for="colorpicker">线条颜色</label>
+    </div>
+    <div>
+        <input id='bkcolorpicker' type="color" onchange="changeBkColor(this)">
+        <label for="bkcolorpicker">背景颜色</label>
     </div>
    
 
 
     <script>
-        cube('#cube').init({
-            color:'red'
+        let bkcolor = '#ffffff';
+        let color = '#000000';
+        document.querySelector('#bkcolorpicker').value = bkcolor;
+        document.querySelector('#colorpicker').value = color;
+
+        let c = cube('#cube').init({
+            color:color,
+            backGroundColor:bkcolor,
+            isRadius:true,
+            radiusSize:4
         });
 
+        function changeColor(picker){
+            console.log(picker.value);
+            console.log(c);
+            c.changeColor(c.options.backGroundColor,picker.value);
+        }
+
+        function changeBkColor(picker){
+            console.log(picker.value);
+            console.log(c);
+            c.changeColor(picker.value,c.options.color);
+        }
+
+
         function changeCube(type){
-            cube('#cube').transByType(type);
+            c.transByType(type);
         }
     
     </script>

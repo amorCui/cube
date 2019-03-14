@@ -1,11 +1,10 @@
 .cube{
     width: 50px;
     height:50px;
-    border: solid;
 }
 
 .cube .cubeLine{
-    color: #000;
+    /* color: #000; */
     background: currentColor;
     position: relative;
     transition-property:color,background,top,left,width,height,transform;
@@ -13,7 +12,7 @@
 }
 
 .cube .cubeLine:before{
-    color: #000;
+    /* color: #000; */
     position: absolute;
     background: currentColor;
     transition-property:color,background,top,left,width,height,transform;
@@ -21,7 +20,7 @@
 }
 
 .cube .cubeLine:after{
-    color: #000;
+    /* color: #000; */
     position: absolute;
     background: currentColor;
     transition-property:color,background,top,left,width,height,transform;
@@ -156,7 +155,7 @@
     left: 7.5px;
     width: 35px;
     height: 4px;
-    transform: rotate(-90deg);
+    transform: rotate(90deg);
 }
 
 .cube .cubeLine.down-arrows:before{
