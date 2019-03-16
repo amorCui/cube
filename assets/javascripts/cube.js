@@ -39,14 +39,14 @@
             isRadius = isRadius === undefined ?opts.isRadius:isRadius;
             radiusSize = isNaN(Number(opts.radiusSize))? opts.radiusSize: Number(opts.radiusSize);
             //判断内部是否存在.cubeLine元素
-            if(!dom.querySelector('.cubeLine')){
+            if(!dom.querySelector('.cube__cubeLine')){
                 cubeLine = document.createElement('div');
-                cubeLine.classList.add('cubeLine',type);
+                cubeLine.classList.add('cube__cubeLine','cube__cubeLine_' + type);
                 dom.append(cubeLine);
             }else{
-                cubeLine = dom.querySelector('.cubeLine');
-                cubeLine.classList = ['cubeLine'];
-                cubeLine.classList.add(type);
+                cubeLine = dom.querySelector('.cube__cubeLine');
+                cubeLine.classList = ['cube__cubeLine'];
+                cubeLine.classList.add('cube__cubeLine_' + type);
             }
            
             mkColor(bkcolor,color,isRadius,radiusSize);
@@ -70,13 +70,13 @@
                 head.appendChild(style);
                 sheet = document.styleSheets[document.styleSheets.length - 1];
                 insertRule(sheet,'.cube','background-color:' + bkcolor + ';',sheet.cssRules.length);
-                insertRule(sheet,'.cube .cubeLine','color:' + color + ';',sheet.cssRules.length);
-                insertRule(sheet,'.cube .cubeLine:before','color:' + color + ';',sheet.cssRules.length);
-                insertRule(sheet,'.cube .cubeLine:after','color:' + color + ';',sheet.cssRules.length);
+                insertRule(sheet,'.cube__cubeLine','color:' + color + ';',sheet.cssRules.length);
+                insertRule(sheet,'.cube__cubeLine:before','color:' + color + ';',sheet.cssRules.length);
+                insertRule(sheet,'.cube__cubeLine:after','color:' + color + ';',sheet.cssRules.length);
                 if(isRadius){
-                    insertRule(sheet,'.cube .cubeLine','border-radius:' + radiusSize + 'px;',sheet.cssRules.length);
-                    insertRule(sheet,'.cube .cubeLine:before','border-radius:' + radiusSize + 'px;',sheet.cssRules.length);
-                    insertRule(sheet,'.cube .cubeLine:after','border-radius:' + radiusSize + 'px;',sheet.cssRules.length);
+                    insertRule(sheet,'.cube__cubeLine','border-radius:' + radiusSize + 'px;',sheet.cssRules.length);
+                    insertRule(sheet,'.cube__cubeLine:before','border-radius:' + radiusSize + 'px;',sheet.cssRules.length);
+                    insertRule(sheet,'.cube__cubeLine:after','border-radius:' + radiusSize + 'px;',sheet.cssRules.length);
                 }
             }else{
                 let sheet ;
@@ -87,9 +87,9 @@
                 });
 
                 insertRule(sheet,'.cube','background-color:' + bkcolor + ';',sheet.cssRules.length);
-                insertRule(sheet,'.cube .cubeLine','color:' + color + ';',sheet.cssRules.length);
-                insertRule(sheet,'.cube .cubeLine:before','color:' + color + ';',sheet.cssRules.length);
-                insertRule(sheet,'.cube .cubeLine:after','color:' + color + ';',sheet.cssRules.length); 
+                insertRule(sheet,'.cube__cubeLine','color:' + color + ';',sheet.cssRules.length);
+                insertRule(sheet,'.cube__cubeLine:before','color:' + color + ';',sheet.cssRules.length);
+                insertRule(sheet,'.cube__cubeLine:after','color:' + color + ';',sheet.cssRules.length); 
             }
         }
 
